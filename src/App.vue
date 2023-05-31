@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <h1>Jobs</h1>
+    <JobList />
     <ul>
-      <li v-for="job in jobs" :key="job.id">
-      {{ job.title }}</li>
+      <li v-for="job in jobs" :key="job.id">{{ job.title }}</li>
     </ul>
   </div>
 </template>
@@ -12,11 +12,12 @@
 
 import { defineComponent, ref} from 'vue';
 import Job from './types/Job'
+import JobList from './components/JobsList.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-
+    JobList
   },
   setup() {
     const jobs = ref<Job[]>([
