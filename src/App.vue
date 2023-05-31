@@ -1,14 +1,13 @@
 <template>
   <div class="app">
-    <h1>{{ name }} - {{  age }}</h1>
-    <button @click="changeName('Zelda')">change name</button>
-    <button @click="changeAge(30)">change age</button>
+    <h1>{{ jobs }}</h1>
   </div>
 </template>
 
 <script lang="ts">
 
 import { defineComponent, ref} from 'vue';
+import Job from './types/Job'
 
 export default defineComponent({
   name: 'App',
@@ -16,23 +15,11 @@ export default defineComponent({
 
   },
   setup() {
-    const name = ref('Link')
-    const age = ref<number | string>(24) 
+    const jobs = ref<Job[]>([{
+      title: 'accountant', location: 'Edinburgh', salary: 3000, id: '1'
+    }])
 
-    return { name, age }
-  },
-
-  methods: {
-    changeName(name: string) {
-      this.name = name
-
-      return name
-    },
-    changeAge(age: string | number) {
-      this.age = age
-
-      return age
-    }
+    return { jobs }
   }
 });
 </script>
