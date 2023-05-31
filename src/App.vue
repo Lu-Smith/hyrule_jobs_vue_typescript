@@ -1,10 +1,7 @@
 <template>
   <div class="app">
     <h1>Jobs</h1>
-    <JobList />
-    <ul>
-      <li v-for="job in jobs" :key="job.id">{{ job.title }}</li>
-    </ul>
+    <JobList :jobs="jobs"/>
   </div>
 </template>
 
