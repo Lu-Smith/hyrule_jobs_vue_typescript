@@ -21,7 +21,10 @@ export default defineComponent({
       age: 25 as number | string
     })
 
-    return {...toRefs(state)}
+    state.name = 'Luna'
+    state.age = '21'
+
+    return { ...toRefs(state) }
   },
 
   methods: {
