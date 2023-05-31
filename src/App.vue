@@ -8,19 +8,22 @@
 
 <script lang="ts">
 
-import { defineComponent } from 'vue';
+import { defineComponent, reactive, toRefs } from 'vue';
 
 export default defineComponent({
   name: 'App',
   components: {
 
   },
-  data() {
-    return {
+  setup() {
+    const state = reactive({
       name: 'Hyrule Jobs',
       age: 25 as number | string
-    }
+    })
+
+    return {...toRefs(state)}
   },
+
   methods: {
     changeName(name: string) {
       this.name = name
@@ -29,7 +32,7 @@ export default defineComponent({
     },
     changeAge(age: string | number) {
       this.age = age
-      
+
       return age
     }
   }
