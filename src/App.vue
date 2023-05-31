@@ -1,6 +1,7 @@
 <template>
   <div class="app">
     <h1>{{ name }}</h1>
+    <button @click="changeName('Zelda')">change name</button>
   </div>
 </template>
 
@@ -15,6 +16,11 @@ export default defineComponent({
   data() {
     return {
       name: 'Hyrule Jobs'
+    }
+  },
+  methods: {
+    changeName(name: string) {
+      this.name = name
     }
   }
 });
