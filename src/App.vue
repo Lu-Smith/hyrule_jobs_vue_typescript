@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <h1>Hello World</h1>
+    <h1>{{ name }}</h1>
   </div>
 </template>
 
@@ -11,12 +11,15 @@ export default defineComponent({
   name: 'App',
   components: {
 
+  },
+  data() {
+    return {
+      name: 'Hyrule Jobs'
+    }
   }
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
+
 </style>
