@@ -2,7 +2,7 @@
     <p class="info">Ordered by {{ order }}</p>
     <h2>Find your dream job 🤔</h2>
   <div class="job-list">
-    <ul>
+    <transition-group name="list" tag="ul">
       <li v-for="job in orderedJobs" :key="job.id">
         <h3>{{ job.title }} <small>in {{ job.location }}</small></h3>
         <div class="salary"> 
@@ -11,7 +11,7 @@
             </p>
       </div>
     </li>
-    </ul>
+    </transition-group>
   </div>
 
 </template>
@@ -78,4 +78,7 @@ h3 {
     font-weight: 400;
 }
 
+.list-move {
+    transition: all 1s;
+}
 </style>
