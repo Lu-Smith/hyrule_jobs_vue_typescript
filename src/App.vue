@@ -56,10 +56,13 @@ header {
 
 button {
   margin: 0 10px;
-  color: #1195c9;
-  border: 3px solid #1195c9;
-  background: #d5f0ff;
+  color: #c93c11;
+  border: 3px solid #c93c11;
+  background: #f5dedc;
   padding: 9px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 </style>
