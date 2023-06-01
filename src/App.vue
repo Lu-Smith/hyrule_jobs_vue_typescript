@@ -7,6 +7,7 @@
     </header>
     <h1>Jobs</h1>
     <JobList :jobs="jobs" :order="order"/>
+    <MainFooter />
   </div>
 </template>
 
@@ -16,11 +17,12 @@ import { defineComponent, ref} from 'vue';
 import Job from './types/Job'
 import OrderTerm from './types/OrderTerm'
 import JobList from './components/JobsList.vue'
+import MainFooter from './components/MainFooter.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    JobList
+    JobList, MainFooter
   },
   setup() {
     const jobs = ref<Job[]>([
