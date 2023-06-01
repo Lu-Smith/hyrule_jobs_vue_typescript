@@ -1,5 +1,5 @@
 <template>
-    <p>Ordered by {{ order }}</p>
+    <p class="info">Ordered by {{ order }}</p>
     <h2>Find your dream job 🤔</h2>
   <div class="job-list">
     <ul>
@@ -53,6 +53,13 @@ h2 {
 
 p {
     color: red;
+}
+
+.info {
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-style: italic;
 }
 
 h3 {
