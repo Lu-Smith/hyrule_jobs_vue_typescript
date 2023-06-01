@@ -1,5 +1,5 @@
 <template>
-  <h2>hello..................</h2>
+  <h2>Find your dream job 🤔</h2>
   <p>Ordered by {{ order }}</p>
   <div class="job-list">
     <ul>
@@ -45,5 +45,9 @@ export default  defineComponent ({
 </script>
 
 <style scoped>
+h2 {
+    margin: 20px 0;
+    font-style: italic;
+}
 
 </style>
