@@ -1,10 +1,10 @@
 <template>
-  <h2>Find your dream job 🤔</h2>
-  <p>Ordered by {{ order }}</p>
+    <p>Ordered by {{ order }}</p>
+    <h2>Find your dream job 🤔</h2>
   <div class="job-list">
     <ul>
       <li v-for="job in orderedJobs" :key="job.id">
-        <h2>{{ job.title }} in {{ job.location }}</h2>
+        <h3>{{ job.title }} <small>in {{ job.location }}</small></h3>
         <div class="salary"> 
             <p>
                 £{{ job.salary }}
@@ -48,6 +48,27 @@ export default  defineComponent ({
 h2 {
     margin: 20px 0;
     font-style: italic;
+    text-align: center;
+}
+
+p {
+    color: red;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.job-list li {
+    background: white;
+    margin: 10px;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.job-list li small {
+    color: #5e5d5d;
+    font-weight: 400;
 }
 
 </style>

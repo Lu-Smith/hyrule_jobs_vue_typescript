@@ -51,7 +51,7 @@ export default defineComponent({
 
 header { 
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 button {

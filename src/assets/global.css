@@ -11,3 +11,8 @@ body {
     background-color: #ece6d9;
 }
 
+h1 {
+    letter-spacing: 4px;
+    text-align: center;
+}
+
