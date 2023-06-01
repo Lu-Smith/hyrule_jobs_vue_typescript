@@ -1,8 +1,10 @@
 <template>
   <div class="app">
-    <button @click="handleClick('title')" >order by title</button>
-    <button  @click="handleClick('salary')" >order by salary</button>
-    <button  @click="handleClick('location')" >order by location</button>
+    <header>
+      <button @click="handleClick('title')" >order by title</button>
+      <button  @click="handleClick('salary')" >order by salary</button>
+      <button  @click="handleClick('location')" >order by location</button>
+    </header>
     <h1>Jobs</h1>
     <JobList :jobs="jobs" :order="order"/>
   </div>
@@ -46,5 +48,18 @@ export default defineComponent({
 </script>
 
 <style>
+
+header { 
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 10px;
+  color: #1195c9;
+  border: 3px solid #1195c9;
+  background: #d5f0ff;
+  padding: 9px 16px;
+}
 
 </style>
